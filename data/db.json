@@ -6,19 +6,19 @@
       "item": "Almonds, Unsalted, in the blue bag"
     },
     {
+      "id": "2",
+      "checked": false,
+      "item": "Pizza"
+    },
+    {
       "id": "3",
       "checked": false,
-      "item": "Butter"
+      "item": "Bread"
     },
     {
       "id": "4",
       "checked": true,
       "item": "Toast"
-    },
-    {
-      "id": "5",
-      "checked": false,
-      "item": "Pizza"
     }
   ]
 }
