@@ -1,0 +1,4 @@
+props is short for properties and properties hold data and prop drilling allows us to pass that  data from parent component to child component .
+Here the App.js will be the parent component 
+Controlled Component: refer to inputs in react forms ,
+Moving dev to being production dependency to use it in add items

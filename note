@@ -1,0 +1,60 @@
+npm start in command line means that wil lunch  local development browser /
+Create separate function component in App.js and imported /
+ this is a Content file :
+ 
+import React, { useState } from 'react';
+
+const Content = () => {
+  // The current state:  Initial name.
+  const [name , setName] = useState('Sara'); 
+  // Count state by button object
+  const [count , setCount] = useState(0);
+    // craete a function for hundle random names
+  const handleNameChange = () => {
+    const names = [ "Sara" , "Ayla" , "Lucifer"];
+const int = Math.floor(Math.random() * 3);
+//  A function that updates the state : Randomly names
+setName(names[int]);
+  }
+
+// Function to handle the click in the console :
+const handleClick = () => {
+  console.log("You clicked it")
+}  
+// Function has a Parameter to handle
+const handleClick2 = (name) => {
+  console.log(` ${name} was clicked it`)
+} 
+// Function has an event , With the this event the target showes up 
+const handleClick3 = (e) => {
+  console.log(e) // the result:  target: button
+  console.log(e.target) // the result: <button>Click it</button>
+  console.log(e.target.innerText) // the result will bt the Click it
+}
+ // function to use count
+ const handleCount = () => {
+  // Decrease count "update state" using function setCount
+  setCount(count + 1) 
+console.log(count)
+ }
+ 
+
+  // Here is the jsx 
+  return (
+          <main>
+            {/* Use the doublr click on paragraph to call the function */}
+               <p onDoubleClick={handleClick}>
+                  {/* curly brackets mean javaScript att */}
+                 Hello {name}!
+                </p>
+                {/* Button to call handleClick function */}
+                <button onClick={handleNameChange}>Change name</button>
+                {/* Anonymous function to pass the parameter  */}
+                <button onClick={() =>handleClick2('Sara') }>Click it</button>
+                <button onClick={(e) =>handleClick3(e) }>Click it</button>
+                <button onClick={handleCount}>Click it</button>
+          </main>
+  )
+}
+
+export default Content
